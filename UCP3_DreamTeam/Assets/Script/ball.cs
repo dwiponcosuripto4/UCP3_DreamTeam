@@ -10,10 +10,10 @@ public class ball : MonoBehaviour
     void Start()
     {
         float[] rayy = new float[2];
-        rayy[0] = -5.0f;
-        rayy[1] = 5.0f;
+        rayy[0] = -6.0f;
+        rayy[1] = 6.0f;
         int x = (int)Random.Range(0,1.4f);
-        int y = (int)Random.RandomRange(-4.5f,4.5f);
+        int y = (int)Random.Range(-4.5f,4.5f);
         GetComponent<Rigidbody>().velocity = new Vector3(x,0,y) * speed;
     }
 
