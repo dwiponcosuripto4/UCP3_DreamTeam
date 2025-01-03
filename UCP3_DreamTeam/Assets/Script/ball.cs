@@ -36,6 +36,7 @@ public class ball : MonoBehaviour
             winnerp1.SetActive(true);
             Time.timeScale = 0;
         }
+        GetComponent<AudioSource>().Play();
     }
 
     public void restart()
