@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
-    public float speed = 10.0f; 
+    public float speed = 10.0f;
+    public GameObject winnerp1, winnerp2;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,25 @@ public class ball : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Wall p1")
+        {
+            winnerp2.SetActive(true);
+            Time.timeScale = 0;
+        }
+        if(collision.gameObject.name == "Wall p2")
+        {
+            winnerp1.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void restart()
+    {
+        Time.timeScale = 1.0f;
+        Application.LoadLevel(Application.loadedLevelName);
     }
 }
