@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 public class ball : MonoBehaviour
 {
-    public float speed = 10.0f;
+    private float speed = 4.0f;
     public GameObject winnerp1, winnerp2;
     public TMP_Text skorp1_tampil, skorp2_tampil;
     int skorp1 = 0,skorp2 = 0;
