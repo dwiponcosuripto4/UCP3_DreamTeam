@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using TMPro;
+using Unity.VisualScripting;
 
 public class ball : MonoBehaviour
 {
     public float speed = 10.0f;
     public GameObject winnerp1, winnerp2;
+    public TMP_Text skorp1_tampil, skorp2_tampil;
+    int skorp1 = 0,skorp2 = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,15 +32,46 @@ public class ball : MonoBehaviour
     {
         if(collision.gameObject.name == "Wall p1")
         {
-            winnerp2.SetActive(true);
-            Time.timeScale = 0;
+            if (skorp1 <= 30)
+            {
+                skorp1 = 0;
+                winner(winnerp2);
+            }
+            else
+            {
+                skorp1 -= 30;
+            }
         }
         if(collision.gameObject.name == "Wall p2")
         {
-            winnerp1.SetActive(true);
-            Time.timeScale = 0;
+            if (skorp2 <= 30)
+            {
+                skorp2 = 0;
+                winner(winnerp1);
+            }
+            else
+            {
+                skorp2 -= 30;
+            }
         }
+        if(collision.gameObject.name == "player 1")
+        {
+            skorp1 += 10;
+            
+        }
+        if(collision.gameObject.name == "player 2")
+        {
+            skorp2 += 10;
+        }
+        skorp1_tampil.text = skorp1.ToString();
+        skorp2_tampil.text = skorp2.ToString();
         GetComponent<AudioSource>().Play();
+    }
+
+    public void winner(GameObject obj)
+    {
+        obj.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void restart()
