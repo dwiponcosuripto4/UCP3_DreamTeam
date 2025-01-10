@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b56b5570c795a74c9e696ca4a2bffd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.1
 --- !u!1 &508829327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,7 +2383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acb18b1a29373349a1902cfb1c6c106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   winnerp1: {fileID: 2096139510}
   winnerp2: {fileID: 438374505}
   skorp1_tampil: {fileID: 1374812955}
@@ -3110,7 +3109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_Name
-      value: player 2
+      value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3626,7 +3629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6380397154757880781, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_Size.x
@@ -3855,7 +3858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b56b5570c795a74c9e696ca4a2bffd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
