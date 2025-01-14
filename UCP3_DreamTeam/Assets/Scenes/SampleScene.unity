@@ -2086,6 +2086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106773261}
   - component: {fileID: 1106773262}
+  - component: {fileID: 1106773263}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -2131,6 +2132,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1106773263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106773260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9aab23c4489baa41a7281aace80696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &1164659533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,7 +2892,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549176344}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3e84ca34bb15df146afb869e04b010bd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2985,7 +2999,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581395884}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3e84ca34bb15df146afb869e04b010bd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
