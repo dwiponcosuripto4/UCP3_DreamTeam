@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class ball : MonoBehaviour
 {
@@ -30,41 +31,41 @@ public class ball : MonoBehaviour
     {
         if (collision.gameObject.name == "Wall p2")
         {
-            skorp1 += 10;
-            CheckWinner(winnerp1, skorp1);
+            skorp1 -= 30;
+            if (skorp1 <= 0)
+            {
+                CheckWinner(winnerp2); 
+            }
         }
-        // Jika bola menabrak dinding pemain 1 (poin untuk pemain 2)
         else if (collision.gameObject.name == "Wall p1")
         {
-            skorp2 += 10;
-            CheckWinner(winnerp2, skorp2);
+            skorp2 -= 30;
+            if (skorp2 <= 0)
+            {
+                CheckWinner(winnerp1); 
+            }
         }
-        // Jika bola mengenai pemain 2
         else if (collision.gameObject.name == "player 2")
         {
             skorp1 += 10;
         }
-        // Jika bola mengenai pemain 1
         else if (collision.gameObject.name == "player 1")
         {
             skorp2 += 10;
         }
 
-        // Mainkan suara setelah setiap tabrakan
         GetComponent<AudioSource>().Play();
     }
 
-    private void CheckWinner(GameObject winnerObj, int score)
+    private void CheckWinner(GameObject winnerObj)
     {
-        if (score >= 30)
-        {
             winnerObj.SetActive(true);
             Time.timeScale = 0f;
-        }
+        
     }
     public void restart()
     {
         Time.timeScale = 1.0f;
-        Application.LoadLevel(Application.loadedLevelName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

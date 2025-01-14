@@ -1672,7 +1672,7 @@ GameObject:
   - component: {fileID: 944284809}
   - component: {fileID: 944284808}
   m_Layer: 0
-  m_Name: Wall p1
+  m_Name: Wall p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2144,7 +2144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9aab23c4489baa41a7281aace80696e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
 --- !u!1 &1164659533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,7 +3638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_Name
-      value: player 2
+      value: player 1
       objectReference: {fileID: 0}
     - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_IsActive
