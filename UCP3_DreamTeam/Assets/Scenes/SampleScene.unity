@@ -3571,6 +3571,7 @@ MonoBehaviour:
   skorp2_tampil: {fileID: 1007125698}
   win1: {fileID: 1583755178}
   win2: {fileID: 2023186713}
+  player1: {fileID: 5024761019146174602}
   player2: {fileID: 3644799085736812584}
   computer: {fileID: 1066289901}
 --- !u!82 &1309945127

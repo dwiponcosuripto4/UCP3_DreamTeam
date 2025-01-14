@@ -14,6 +14,7 @@ public class ball : MonoBehaviour
     public TMP_Text win1, win2;
     private int skorp1 = 0,skorp2 = 0;
 
+    public GameObject player1;
     public GameObject player2;
     public GameObject computer;
 
@@ -51,7 +52,7 @@ public class ball : MonoBehaviour
             skorp1 -= 30;
             if (skorp1 <= 0)
             {
-                CheckWinner(winnerp2); 
+                StartCoroutine(CheckWinner(winnerp2, player1));
             }
         }
         else if (collision.gameObject.name == "Wall p1")
@@ -59,7 +60,7 @@ public class ball : MonoBehaviour
             skorp2 -= 30;
             if (skorp2 <= 0)
             {
-                CheckWinner(winnerp1); 
+                StartCoroutine(CheckWinner(winnerp1, player2));
             }
         }
         else if (collision.gameObject.name == "player 1")
@@ -76,9 +77,15 @@ public class ball : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
-    public void CheckWinner(GameObject winnerObj)
+    private IEnumerator CheckWinner(GameObject winnerObj, GameObject losingPlayer)
     {
-        
+        if (losingPlayer != null)
+        {
+            Destroy(losingPlayer);
+        }
+
+        yield return new WaitForSeconds(2.0f);
+
         if (ModeManager.Instance.isVsCOM && winnerObj == winnerp1)
         {
             
