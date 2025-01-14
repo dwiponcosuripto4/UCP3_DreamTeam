@@ -61,8 +61,15 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game berhasil disimpan!");
     }
 
-    public void StartNew()
+    public void StartVsCOM()
     {
+        ModeManager.Instance.SetVsCOMMode();
+        SceneManager.LoadScene(1);
+    }
+
+    public void StartPlayerVsPlayer()
+    {
+        ModeManager.Instance.SetPlayerVsPlayerMode();
         SceneManager.LoadScene(1);
     }
 

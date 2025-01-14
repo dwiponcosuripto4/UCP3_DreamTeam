@@ -12,7 +12,6 @@ public class ScoreManager : MonoBehaviour
     public int soloScore = 0;
     public int bestSoloScore = 0;
 
-
     private void Awake()
     {
         if (Instance != null)

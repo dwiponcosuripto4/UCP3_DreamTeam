@@ -1182,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5024761019846853553, guid: f01059cf500586945ae13db78d565633, type: 3}
       propertyPath: m_Name
-      value: player 2
+      value: player 1
       objectReference: {fileID: 0}
     - target: {fileID: 5773107595350406365, guid: f01059cf500586945ae13db78d565633, type: 3}
       propertyPath: m_Name
@@ -1190,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8339600469584401337, guid: f01059cf500586945ae13db78d565633, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.600914
+      value: -8.17
       objectReference: {fileID: 0}
     - target: {fileID: 8339600469584401337, guid: f01059cf500586945ae13db78d565633, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121daad0aacafd54689b9f948244a138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1309945124}
+  ball: {fileID: 8919210343787301177}
 --- !u!1 &1106773260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3259,8 @@ MonoBehaviour:
   skorp2_tampil: {fileID: 1007125698}
   win1: {fileID: 1583755178}
   win2: {fileID: 2023186713}
+  player2: {fileID: 3644799085736812584}
+  computer: {fileID: 1066289901}
 --- !u!82 &1309945127
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4120,11 +4122,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 329697917262344233, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.96
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 329697917262344233, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 329697917262344233, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5041,7 +5043,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 329697917262344233, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.96
+      value: 8.47
       objectReference: {fileID: 0}
     - target: {fileID: 329697917262344233, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5089,7 +5091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_Name
-      value: player 1
+      value: player 2
       objectReference: {fileID: 0}
     - target: {fileID: 3644799085668098081, guid: 0106406669a4b9d4da18ed0fce148f25, type: 3}
       propertyPath: m_IsActive
@@ -5323,6 +5325,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+--- !u!4 &8919210343787301177 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8339600469584401337, guid: f01059cf500586945ae13db78d565633, type: 3}
+  m_PrefabInstance: {fileID: 445427031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
