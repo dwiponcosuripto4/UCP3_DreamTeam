@@ -16,11 +16,11 @@ public class PlayerController : MonoBehaviour
     {
         if (gameObject.name == "player 2")
         {
-            if (Input.GetKey(KeyCode.W) && transform.localPosition.z < 6f)
+            if (Input.GetKey(KeyCode.UpArrow) && transform.localPosition.z < 6f)
             {
                 transform.Translate(0, 0, speed);
             }
-            if (Input.GetKey(KeyCode.S) && transform.localPosition.z > -6f)
+            if (Input.GetKey(KeyCode.DownArrow) && transform.localPosition.z > -6f)
             {
                 transform.Translate(0, 0, -speed);
             }
@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour
 
         if (gameObject.name == "player 1")
         {
-            if (Input.GetKey(KeyCode.UpArrow) && transform.localPosition.z < 6f)
+            if (Input.GetKey(KeyCode.W) && transform.localPosition.z < 6f)
             {
                 transform.Translate(0, 0, speed);
             }
-            if (Input.GetKey(KeyCode.DownArrow) && transform.localPosition.z > -6f)
+            if (Input.GetKey(KeyCode.S) && transform.localPosition.z > -6f)
             {
                 transform.Translate(0, 0, -speed);
             }

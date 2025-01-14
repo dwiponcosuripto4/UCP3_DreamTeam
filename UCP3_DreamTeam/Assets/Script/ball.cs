@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class ball : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private float speed = 7.0f;
     public GameObject winnerp1, winnerp2;
     public TMP_Text skorp1_tampil, skorp2_tampil;
     private int skorp1 = 0,skorp2 = 0;
@@ -16,8 +16,8 @@ public class ball : MonoBehaviour
     void Start()
     {
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
-        float y = Random.Range(-1.0f, 1.0f);
-        GetComponent<Rigidbody>().velocity = new Vector3(x, 0, y).normalized * speed;
+        float z = Random.Range(-1.0f, 1.0f);
+        GetComponent<Rigidbody>().velocity = new Vector3(x, 0, z).normalized * speed;
     }
 
     // Update is called once per frame
@@ -45,11 +45,11 @@ public class ball : MonoBehaviour
                 CheckWinner(winnerp1); 
             }
         }
-        else if (collision.gameObject.name == "player 2")
+        else if (collision.gameObject.name == "player 1")
         {
             skorp1 += 10;
         }
-        else if (collision.gameObject.name == "player 1")
+        else if (collision.gameObject.name == "player 2")
         {
             skorp2 += 10;
         }
