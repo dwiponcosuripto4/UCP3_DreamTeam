@@ -11,10 +11,13 @@ public class ball : MonoBehaviour
     private float speed = 7.0f;
     public GameObject winnerp1, winnerp2;
     public TMP_Text skorp1_tampil, skorp2_tampil;
+    public TMP_Text win1, win2;
     private int skorp1 = 0,skorp2 = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float z = Random.Range(-1.0f, 1.0f);
         GetComponent<Rigidbody>().velocity = new Vector3(x, 0, z).normalized * speed;
@@ -23,8 +26,7 @@ public class ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        skorp1_tampil.text = skorp1.ToString();
-        skorp2_tampil.text = skorp2.ToString();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -54,12 +56,21 @@ public class ball : MonoBehaviour
             skorp2 += 10;
         }
 
+        skorp1_tampil.text = skorp1.ToString();
+        skorp2_tampil.text = skorp2.ToString();
+
+        win1.text = "SCORE:" + skorp1.ToString();
+        win2.text = "SCORE:" + skorp2.ToString();
         GetComponent<AudioSource>().Play();
     }
 
     private void CheckWinner(GameObject winnerObj)
     {
-            winnerObj.SetActive(true);
+
+        ScoreManager.Instance.win1Score = skorp1;
+        ScoreManager.Instance.win2Score = skorp2;
+
+        winnerObj.SetActive(true);
             Time.timeScale = 0f;
         
     }

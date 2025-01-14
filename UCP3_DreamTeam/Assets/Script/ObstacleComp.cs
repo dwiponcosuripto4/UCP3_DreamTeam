@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObstacleComp : MonoBehaviour
 {
-    private float speed = 6.0f;
-    private float range = 5.0f;
+    private float speed = 3.0f;
+    private float range = 5.5f;
 
     private float startZ;
     // Start is called before the first frame update
