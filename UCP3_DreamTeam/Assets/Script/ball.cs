@@ -16,6 +16,7 @@ public class ball : MonoBehaviour
 
     public GameObject player1;
     public GameObject player2;
+    public GameObject bgcomputer;
     public GameObject computer;
 
     // Start is called before the first frame update
@@ -24,12 +25,32 @@ public class ball : MonoBehaviour
         if (ModeManager.Instance.isVsCOM)
         {
             player2.SetActive(false);
+            bgcomputer.SetActive(true);
             computer.SetActive(true);
+
+            // Nonaktifkan teks skor untuk Player 2
+            skorp2_tampil.gameObject.SetActive(false);
+
+            // Aktifkan teks skor untuk komputer jika ada
+            if (skorpComputer_tampil != null)
+            {
+                skorpComputer_tampil.gameObject.SetActive(true);
+            }
         }
         else
         {
             player2.SetActive(true);
+            bgcomputer.SetActive(false);
             computer.SetActive(false);
+
+            // Aktifkan teks skor untuk Player 2
+            skorp2_tampil.gameObject.SetActive(true);
+
+            // Nonaktifkan teks skor untuk komputer jika ada
+            if (skorpComputer_tampil != null)
+            {
+                skorpComputer_tampil.gameObject.SetActive(false);
+            }
         }
 
         Time.timeScale = 1.0f;
@@ -116,7 +137,7 @@ public class ball : MonoBehaviour
             ScoreManager.Instance.win2Score = skorp2;
         }
         winnerObj.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0f;    
         
     }
     public void restart()
