@@ -10,9 +10,9 @@ public class ball : MonoBehaviour
 {
     private float speed = 7.0f;
     public GameObject winnerp1, winnerp2;
-    public TMP_Text skorp1_tampil, skorp2_tampil;
+    public TMP_Text skorp1_tampil, skorp2_tampil, skorpComputer_tampil;
     public TMP_Text win1, win2;
-    private int skorp1 = 0,skorp2 = 0;
+    private int skorp1 = 0,skorp2 = 0, skorpComputer = 0;
 
     public GameObject player1;
     public GameObject player2;
@@ -43,6 +43,10 @@ public class ball : MonoBehaviour
     {
         skorp1_tampil.text = skorp1.ToString();
         skorp2_tampil.text = skorp2.ToString();
+        if (skorpComputer_tampil != null)
+        {
+            skorpComputer_tampil.text = skorpComputer.ToString();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -71,9 +75,17 @@ public class ball : MonoBehaviour
         {
             skorp2 += 10;
         }
+        else if (collision.gameObject.name == "computer")
+        {
+            skorpComputer += 10;
+        }
 
         win1.text = "SCORE:" + skorp1.ToString();
         win2.text = "SCORE:" + skorp2.ToString();
+        if (skorpComputer_tampil != null)
+        {
+            skorpComputer_tampil.text = "SCORE: " + skorpComputer.ToString();
+        }
         GetComponent<AudioSource>().Play();
     }
 

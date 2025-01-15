@@ -3114,6 +3114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1309945124}
+  speed: 5
+  decisionInterval: 2
 --- !u!1 &1106773260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,6 +3575,7 @@ MonoBehaviour:
   winnerp2: {fileID: 438374505}
   skorp1_tampil: {fileID: 1374812955}
   skorp2_tampil: {fileID: 1007125698}
+  skorpComputer_tampil: {fileID: 1007125698}
   win1: {fileID: 1583755178}
   win2: {fileID: 2023186713}
   player1: {fileID: 5024761019146174602}
